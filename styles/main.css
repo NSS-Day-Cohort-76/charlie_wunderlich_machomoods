@@ -16,6 +16,7 @@
     padding: 1em;
     text-align: center;
   }
+  
   .header h1 {
     font-size: 3rem;
   }
@@ -25,54 +26,77 @@
     font-size: 1.2rem;
     margin: 1em 0;
   }
-
-  .quotes {
+  
+  /* Columns layout */
+  .columns {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    text-wrap: wrap;
-    flex-direction: column;
-  }
-
-  .advice {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 2px solid #333; /* creates a borer */
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 5px; /* rounds the corners */
-    background-color: #f9f9f9; /* background color */
-  }
-
-  /* Flex container for columns */
-  .container {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-
   }
   
   /* Each column styling */
   .column {
-    flex: 1;            /* Makes each column share the available space */
-    margin: 0 10px;     /* Adjust spacing between columns */
-    display: flex;
-    flex-direction: column; /* Arrange inner content vertically */
-    align-items: center;    /* Center content horizontally */
+    flex: 0 0 calc(33.3% - 20px);  /* 3 items per row */
+    box-sizing: border-box;
     border: 2px solid #333;
+    margin-bottom: 20px;
+    padding: 10px;
+    align-items: center;
+    text-decoration: wavy;
+  }
+  
+  .column p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
   }
   
   /* Optional: Style the image to fit nicely */
   .column img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 1em;
+    margin-bottom: 10px;
+  }
+  
+  /* Advice container - holds the label and quotes */
+  .advice-container {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  
+  /* Macho advice box */
+  .macho-advice-label {
+    border: 2px solid #333;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    flex-shrink: 0;
+    align-self: center;
+
   }
   
   /* Quotes styling */
+  .quotes {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  
   .quotes blockquote {
     font-style: italic;
     margin: 0.5em 0;
   }
-  
+
+  .mood-name {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+  }
