@@ -1,0 +1,73 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Basic styles */
+  body {
+    font-family: sans-serif;
+  }
+  
+  /* Header styling */
+  .header {
+    background: #f0f0f0;
+    padding: 1em;
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 3rem;
+  }
+  
+  .intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1em 0;
+  }
+
+  .quotes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .advice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+
+  /* Flex container for columns */
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+  }
+  
+  /* Each column styling */
+  .column {
+    flex: 1;            /* Makes each column share the available space */
+    margin: 0 10px;     /* Adjust spacing between columns */
+    display: flex;
+    flex-direction: column; /* Arrange inner content vertically */
+    align-items: center;    /* Center content horizontally */
+  }
+  
+  /* Optional: Style the image to fit nicely */
+  .column img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+  }
+  
+  /* Quotes styling */
+  .quotes blockquote {
+    font-style: italic;
+    margin: 0.5em 0;
+  }
+  
